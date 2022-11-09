@@ -26,7 +26,7 @@ cd ~/.config; tar xvf arduino-1.8.19-linux64.tar.xz; rm arduino-1.8.19-linux64.t
 cd arduino-1.8.19; sudo install.sh; ./arduino-linux-setup.sh $USER
 ```
 
-Lasly, you need to add the micronuclus udev rules for ATTiny85. Download [49-micronucleus.rules](https://github.com/byui-csa/bad-usb/blob/main/49-micronucleus.rules) and place the file in `/etc/udev/rules.d/`. Feel free to use the command below to do this automatically.
+Lasly, you need to add the micronuclus udev rules. Download [49-micronucleus.rules](https://github.com/byui-csa/bad-usb/blob/main/49-micronucleus.rules) and place the file in `/etc/udev/rules.d/`. Feel free to use the command below to do this automatically.
 
 ```bash
 sudo wget https://raw.githubusercontent.com/byui-csa/bad-usb/main/49-micronucleus.rules -O /etc/udev/rules.d/49-micronucleus.rules
