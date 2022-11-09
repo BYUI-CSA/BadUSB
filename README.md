@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=uH-4btjE56E
 
 ### Additional Recommendations
 
-Use Arduino IDE version 1.8.19 and use this new Board Manager URL: https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json. The old Board Manager URL provides 5 year old package, which can causes issues (specifically on Linux).
+Use Arduino IDE version 1.8.19 and use this new Board Manager URL: https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json. The old Board Manager URL provides 5 year old packages, which can causes issues (specifically on Linux).
 
 You shouldn't have to manually install the drivers, just simply follow the steps to add the "Digistump AVR Boards" and they should be installed automatically.
 
