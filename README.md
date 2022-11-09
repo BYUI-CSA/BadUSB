@@ -23,7 +23,7 @@ To properly install Arduino IDE 1.8.19, download [arduino-1.8.19-linux64.tar.xz]
 ```bash
 wget https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz -O ~/.config/arduino-1.8.19-linux64.tar.xz
 cd ~/.config; tar xvf arduino-1.8.19-linux64.tar.xz; rm arduino-1.8.19-linux64.tar.xz
-cd arduino-1.8.19; sudo install.sh; ./arduino-linux-setup.sh $USER
+cd arduino-1.8.19; sudo ./install.sh; ./arduino-linux-setup.sh $USER
 ```
 
 Lasly, you need to add the micronuclus udev rules. Download [49-micronucleus.rules](https://github.com/byui-csa/bad-usb/blob/main/49-micronucleus.rules) and place the file in `/etc/udev/rules.d/`. Feel free to use the command below to do this automatically.
