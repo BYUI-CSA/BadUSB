@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=uH-4btjE56E
 There are several extra hoops to jump through. You must add the udev rules and ensure that you are a part of the necessary groups
 
 - To properly install Arduino IDE 1.8.19:
-  - Download (arduino-1.8.19-linux64.tar.xz)[https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz] to `~/.config` or use `wget https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz -O ~/.config/arduino-1.8.19-linux64.tar.xz`
+  - Download [arduino-1.8.19-linux64.tar.xz](https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz) to `~/.config` or use `wget https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz -O ~/.config/arduino-1.8.19-linux64.tar.xz`
   - Extract it with `cd ~/.config; tar xvf arduino-1.8.19-linux64.tar.xz; rm arduino-1.8.19-linux64.tar.xz`
   - Run both `install.sh` and `arduino-linux-setup.sh`. You may copy and paste this command `cd arduino-1.8.19; sudo install.sh; ./arduino-linux-setup.sh $USER`
 -  Lasly, you need to add the micronuclus udev rules for ATTiny85:
