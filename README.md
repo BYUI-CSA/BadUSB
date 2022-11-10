@@ -6,23 +6,27 @@ Feel free to add your own and make the existing scripts better. You can download
 
 ## Development Environment
 
-This [video](https://www.youtube.com/watch?v=uH-4btjE56E) by The Cyber Mentor does an excellent job detailing the setup. See the recommendations below to be sure everything works on the first go.
+This [video](https://www.youtube.com/watch?v=uH-4btjE56E) by The Cyber Mentor does an excellent job detailing the setup. Follow his video and this guide and everything should work correctly.
 
-### Recommendations
+Use and install [Arduino IDE 1.8.19](https://www.arduino.cc/en/software#legacy-ide-18x). To install on Linux follow the specific instructions below. Once installed, open Arduino IDE.
 
-Use and install [Arduino IDE 1.8.19](https://www.arduino.cc/en/software#legacy-ide-18x).
-
-Use the the following Board Manager URL. The video's Board Manager URL provides 5 year old packages, which can causes issues (specifically on Linux).
+Set the Board Manager URL by going to File > Preferences > Additional Board Manager URLs. Use the the updated Board Manager URL below. The video's Board Manager URL provides 5 year old packages, which can causes issues (specifically on Linux).
 
 ```
 https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json
 ```
 
-#### Windows
+Add ATTiny support by going to Tools > Board > Boards Manager and searching for `Digistump AVR Boards`. Install the latest version. Once completed, close the popup.
+
+Select board by going to Tools > Board > Digistump AVR > Digispark. Select Programmer by going to Tools > Programmer > micronucleus.2.5. 
+
+You should now be able to upload scripts. To upload scripts you must first press the upload button and then plug in the USB.
+
+### Windows
 
 Sometimes the drivers are automatically installed and sometimes they are not. To manually install drivers on Windows download [Digistump.Drivers.zip](https://github.com/digistump/DigistumpArduino/releases/download/1.6.7/Digistump.Drivers.zip), extract all files, then run `Install Drivers.exe`. 
 
-#### Linux
+### Linux
 
 To properly install Arduino IDE 1.8.19, download [arduino-1.8.19-linux64.tar.xz](https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz) (recommended to ~/.config), extract it, then run `install.sh` (creates desktop launcher) and `arduino-linux-setup.sh` (adds necessary groups and sets up Arduino udev rules). Feel free to use the commands below to do this automatically.
 
@@ -38,7 +42,7 @@ Lasly, you need to add the micronuclus udev rules. Download [49-micronucleus.rul
 sudo wget https://raw.githubusercontent.com/byui-csa/bad-usb/main/49-micronucleus.rules -O /etc/udev/rules.d/49-micronucleus.rules
 ```
 
-You will need to restart your system at this point. If you see errors such as `Unknown Device/Micronucleus Version` when uploading scripts then make sure that you're using the new Board Manager URL from above.
+You will need to restart your system at this point. If you see errors such as `Unknown Device/Micronucleus Version` when uploading scripts then make sure that you're using the updated Board Manager URL from above and the latest version of `Digistump AVR Boards`.
 
 ## Repos
 
