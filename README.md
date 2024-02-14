@@ -55,4 +55,4 @@ You will need to restart your system at this point. If you see errors such as `U
 - Forked Community: https://github.com/ArminJo/DigistumpArduino
 - Deprecated Official: https://github.com/digistump/DigistumpArduino
 
-If you want to win win. -Uplandwave
+If you want to win, win. -Uplandwave
